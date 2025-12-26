@@ -1,0 +1,36 @@
+@startuml
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFF8E7
+skinparam usecaseBorderColor #C97B19
+skinparam actorBorderColor #C97B19
+skinparam actorBackgroundColor #FFFFFF
+
+left to right direction
+
+actor "Admin" as A
+
+rectangle "Administration – MVP" {
+
+  (Se connecter) as UC1
+
+  (Gérer questions QCM) as UC2
+  (Ajouter question) as UC3
+  (Modifier question) as UC4
+  (Supprimer question) as UC5
+  (Afficher liste questions) as UC6
+  (Voir liste des candidats) as UC7
+
+
+  UC2 --> UC3
+  UC2 --> UC4
+  UC2 --> UC5
+  UC2 --> UC6
+
+}
+
+A --> UC1
+A --> UC2
+A --> UC7
+
+@enduml
+
