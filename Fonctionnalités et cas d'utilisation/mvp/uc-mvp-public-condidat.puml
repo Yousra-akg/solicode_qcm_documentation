@@ -1,0 +1,30 @@
+@startuml
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #E8F5FF
+skinparam usecaseBorderColor #0077B6
+skinparam actorBorderColor #0077B6
+skinparam actorBackgroundColor #FFFFFF
+
+left to right direction
+
+actor "Candidat" as C
+
+rectangle "Plateforme – Côté Public (MVP)" {
+
+  (Accéder au site) as UC1
+  (S'inscrire) as UC2
+  (Passer Test QCM) as UC3
+  (Test chronométré) as UC4
+  (Voir résultat du test) as UC5
+  (Afficher accepté / refusé) as UC6
+
+  UC3 --> UC4
+  UC5 --> UC6
+}
+
+C --> UC1
+C --> UC2
+C --> UC3
+C --> UC5
+
+@enduml
