@@ -1,0 +1,40 @@
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFF8E7
+skinparam usecaseBorderColor #C97B19
+skinparam actorBorderColor #C97B19
+skinparam actorBackgroundColor #FFFFFF
+skinparam padding 20
+
+actor "Candidat" as C
+
+rectangle "Plateforme – Parcours Candidat" {
+
+  (Authentification) as UC0
+  C --> UC0
+
+  (Accéder au tableau de bord) as UC1
+  UC0 --> UC1 : <<include>>
+
+  (Passer Test QCM) as UC2
+  UC1 --> UC2
+
+  (Voir résultat du test) as UC3
+  UC2 --> UC3
+
+  (Afficher décision: Accepté / Refusé) as UC4
+  UC3 --> UC4
+
+  (Voir date entretien) as UC5
+  UC4 --> UC5 : si accepté
+
+  (Consulter historique des tests) as UC7
+  UC1 --> UC7 : <<extend>>
+
+  (Notification email automatique) as UC8
+  UC4 --> UC8 : <<extend>>
+  UC5 --> UC8 : <<extend>>
+}
+
+@enduml
