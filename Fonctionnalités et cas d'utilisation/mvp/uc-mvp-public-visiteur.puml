@@ -1,0 +1,30 @@
+@startuml
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FEF9E7
+skinparam usecaseBorderColor #B7950B
+skinparam actorBorderColor #B7950B
+skinparam actorBackgroundColor #FFFFFF
+
+left to right direction
+
+actor "Visiteur" as V
+
+rectangle "Plateforme – Public – Visiteur (MVP)" {
+
+  (Accéder au site) as UC1
+  (Consulter page d'accueil) as UC2
+  (Voir informations sur SoliCode) as UC3
+  (Lire conditions d'inscription) as UC4
+  (Accéder au formulaire d'inscription) as UC5
+  (Bouton – S'inscrire) as UC6
+}
+
+' Relations
+V --> UC1
+V --> UC2
+V --> UC3
+V --> UC4
+V --> UC6
+UC6 --> UC5
+
+@enduml
