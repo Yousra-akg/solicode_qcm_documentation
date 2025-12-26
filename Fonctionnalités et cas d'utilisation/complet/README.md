@@ -16,9 +16,7 @@ Voici les fonctionnalités que vous trouverez ici en plus :
 ### 2️⃣  🛠 Administration professionnelle
 | MVP | Version complète |
 |-----|------------------|
-| CRUD des questions QCM | **Importation des questions** (Excel, CSV) |
-| — | **Exportation des résultats** (Excel / PDF) |
-| — | Gestion **statistiques** : taux de réussite, nb de candidatures |
+| CRUD des questions QCM | Gestion **statistiques** : taux de réussite, nb de candidatures |
 
 ---
 

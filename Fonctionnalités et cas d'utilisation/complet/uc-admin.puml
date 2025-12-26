@@ -1,0 +1,51 @@
+@startuml Administration_Use_Cases
+left to right direction
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #EEF7FF
+skinparam usecaseBorderColor #3A7CA5
+skinparam actorBorderColor #3A7CA5
+skinparam actorBackgroundColor #FFFFFF
+
+title Diagramme de cas d'utilisation - Administration
+
+actor "Administrateur" as Admin
+
+rectangle "Administration - Version Complète" {
+  usecase "Se connecter" as UC1
+  
+  usecase "Gérer les Questions QCM" as UC2
+  usecase "Ajouter une question" as UC3
+  usecase "Modifier une question" as UC4
+  usecase "Supprimer une question" as UC5
+
+  UC3 .> UC2 : <<include>>
+  UC4 .> UC2 : <<include>>
+  UC5 .> UC2 : <<include>>
+
+
+  usecase "Gérer les candidats" as UC8
+  usecase "Voir liste des candidats" as UC9
+  usecase "Consulter résultats des tests" as UC10
+  usecase "Planifier date entretien" as UC11
+  usecase "Envoyer email d'acceptation/refus" as UC12
+  
+  UC9 .> UC8 : <<include>>
+  UC10 .> UC8 : <<include>>
+  UC11 .> UC8 : <<include>>
+  UC12 .> UC8 : <<include>>
+
+  UC9 .> UC8 : <<include>>
+  UC10 .> UC8 : <<include>>
+  UC11 .> UC8 : <<include>>
+  UC12 .> UC11 : <<include>>  ' email envoyé automatiquement après planification
+
+  
+  usecase "Voir statistiques (taux de réussite / nb candidats)" as UC13
+}
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC8
+Admin --> UC13
+
+@enduml

@@ -1,0 +1,19 @@
+@startmindmap
+* Administration
+** Gestion des Utilisateurs
+*** Créer un utilisateur
+*** Modifier un utilisateur
+*** Supprimer un utilisateur
+** Gestion des Questions
+*** Ajouter une question
+*** Modifier une question
+*** Supprimer une question
+** Gestion des Tests
+*** Créer un test
+*** Planifier un test
+*** Analyser les résultats
+** Paramètres
+*** Configuration du système
+*** Gestion des rôles
+*** Journal d'activité
+@endmindmap
